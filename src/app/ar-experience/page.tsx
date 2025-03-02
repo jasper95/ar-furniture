@@ -17,19 +17,15 @@ const ARExperience = dynamic(() => import("@/components/ARExperience"), {
 
 export default function ARExperiencePage() {
   const { models, loading, error } = useModels();
-  console.log(
-    "🚀 ~ ARExperiencePage ~ models, loading, error:",
-    models,
-    loading,
-    error
-  );
   const [selectedModel, setSelectedModel] = useState<Model | null>(null);
   const [arSupported, setArSupported] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check if WebXR is supported
     if (typeof window !== "undefined") {
+      console.log("useEffect");
       if ("xr" in navigator) {
+        console.log("xr");
         // @ts-ignore - TypeScript doesn't know about isSessionSupported yet
         navigator.xr
           ?.isSessionSupported("immersive-ar")
