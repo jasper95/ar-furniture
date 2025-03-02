@@ -208,8 +208,8 @@ export default function ARExperience({ modelUrl }: ARExperienceProps) {
             </svg>
             <h2 className="text-2xl font-bold mb-2">AR Not Supported</h2>
             <p className="mb-4">
-              Your device or browser doesn't support WebXR Augmented Reality.
-              Please try using a compatible device and browser, such as:
+              {`Your device or browser doesn't support WebXR Augmented Reality.
+              Please try using a compatible device and browser, such as:`}
             </p>
             <ul className="text-left text-sm mb-6">
               <li>• Chrome on Android (ARCore compatible device)</li>
